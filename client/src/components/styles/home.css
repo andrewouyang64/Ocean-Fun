@@ -1,0 +1,31 @@
+.homePage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.aa {
+    
+    margin: 20px;
+    width: 250px;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+    /* background-image: url("assets/river3.jpg"); */
+    
+  }
+  
+  h2 {
+    padding: 5px;
+  }
+
+  p {
+    padding: 10px
+  }
+
+  .aa:hover {
+    border-color: coral;
+    border-style: solid;
+    cursor: pointer;
+  }
