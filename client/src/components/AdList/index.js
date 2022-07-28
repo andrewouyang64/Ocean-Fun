@@ -8,13 +8,10 @@ const adList = ({ ads,}) => {
 
   return (
     <div className='instructorList'>
-      
-        {ads.map((title) => (
+      {ads.map((title) => (
             <div className='title'>
-              <Link to ={`/ads/${ad._id}`}>
-                  {title}
-                </Link>
-            </div>
+                {title}
+                </div>
             ))}
 
             <div className='addNewAd'>
