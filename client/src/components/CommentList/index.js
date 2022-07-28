@@ -9,7 +9,7 @@ const CommentList = ({ comments,}) => {
     <div className='commentList'>
       
         {comments.map((comment) => (
-            <div className='title'>
+            <div className='comment'>
                 {comment}
             </div>
         ))}

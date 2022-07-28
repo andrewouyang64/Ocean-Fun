@@ -4,7 +4,6 @@ import AdList from '../components/AdList';
 import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
 import { QUERY_ADS } from '../utils/queries';
-import { QUERY_COMMENTS } from '../utils/queries';
 import { ADD_COMMENTS } from '../utils/mutation';
 
 const ViewAd = () => {
@@ -23,9 +22,16 @@ const ViewAd = () => {
                     )}
             </div>
     
+            <div className='adAndComment'>
                 <div className='adContent'>
                     {selectedAd && <AdDescription adContent={selectedAd}/> }
                 </div>
+
+                <div className='commentList'>
+                    {selectedAd && <CommentList comments={selectedAd}/> }
+                </div>
+                <CommentForm adId = {selectedAd._id}/>
+            </div>    
         </div>
     
   );
