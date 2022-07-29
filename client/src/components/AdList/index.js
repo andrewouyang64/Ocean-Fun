@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const adList = ({ ads,}) => {
+const AdList = ({ ads,}) => {
   // const { data: { ads } } = ads
   // const ads = {data: {ads: [{title: 'asdsad', desc: 'x'}, {title: 'ásda', desc: 'x'}]}}
   if (!ads.length) {
@@ -17,8 +17,8 @@ const adList = ({ ads,}) => {
             ))}
 
             <div className='addNewAd'>
-                <Link to ='/newAd'>
-                    Create New ad
+                <Link to ='/AdForm'>
+                    Create New Ad
                  </Link>
              </div>                
       
@@ -26,4 +26,4 @@ const adList = ({ ads,}) => {
   );
 };
 
-export default adList;
+export default AdList;
