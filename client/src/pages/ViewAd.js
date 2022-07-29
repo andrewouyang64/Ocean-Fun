@@ -4,11 +4,11 @@ import AdList from '../components/AdList';
 import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
 import { QUERY_ADS } from '../utils/queries';
-import { ADD_COMMENTS } from '../utils/mutation';
 
 const ViewAd = () => {
   const { loading, data } = useQuery(QUERY_ADS);
   const ads = data?.ads || [];
+//   const ads = {ads: [{}]}
   const [selectedAd, setSelectedAd] = useState();
   return (
         <div className="viewAd">
@@ -23,18 +23,17 @@ const ViewAd = () => {
             </div>
     
             <div className='adAndComment'>
-                <div className='adContent'>
-                    {selectedAd && <AdDescription adContent={selectedAd}/> }
+                <div className='adDescription'>
+                    {selectedAd && <AdDescription adContent={selectedAd}/>}
                 </div>
-
                 <div className='commentList'>
-                    {selectedAd && <CommentList comments={selectedAd}/> }
+                    {selectedAd && <CommentList comments={selectedAd}/>}
                 </div>
-                <CommentForm adId = {selectedAd._id}/>
+                <div className='addCommnet'></div>
+                    {selectedAd && <CommentForm adId = {selectedAd._id}/>}
             </div>    
         </div>
-    
-  );
+    );
 };
 
 export default ViewAd;
