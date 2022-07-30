@@ -1,26 +1,38 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-const thoughtSchema = new Schema({
-    sport: {
+const adSchema = new Schema({
+    sportName: {
         type: String,
-        enum: ['Surfing', 'Kitesurfing', 'Scubadiving'],
         required: true,
+        minlength: 1,
+        maxlength: 100,
         trim: true,
     },
     title: {
         type: String,
         required: true,
         minlength: 1,
-        maxlength: 20,
+        maxlength: 100,
         trim: true,
     },
-    AdAuthor: {
+    adText: {
+        type: String,
+        required: true,
+        minlength: 1,
+        maxlength: 100,
+        trim: true,
+    },
+    adAuthor: {
         type: String,
         required: true,
         trim: true,
     },
-
+    email: {
+        type: String,
+        required: true,
+        trim: true,
+    },
     createdAt: {
         type: Date,
         default: Date.now,
@@ -28,12 +40,25 @@ const thoughtSchema = new Schema({
     },
     comments: [
         {
-            type: Schema.Types.ObjectId,
-            ref: 'Comments',
+            commentText: {
+                type: String,
+                required: true,
+                minlength: 1,
+                maxlength: 280,
+            },
+            commentAuthor: {
+                type: String,
+                required: true,
+            },
+            createdAt: {
+                type: Date,
+                default: Date.now,
+                get: (timestamp) => dateFormat(timestamp),
+            },
         },
     ],
 });
 
-const Ad = model('Ad', thoughtSchema);
+const Ad = model('Ad', adSchema);
 
 module.exports = Ad;
