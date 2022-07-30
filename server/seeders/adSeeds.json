@@ -1,0 +1,30 @@
+[
+  {
+    "sportName": "surfing",
+    "title": "Cheapest lesson in Gold Cost",
+    "adText": "$25/hour-3 people groups-all equipment included",
+    "adAuthor": "Alicia",
+    "email": "alicia@gmail.com"
+  },
+  {
+    "sportName": "surfing",
+    "title": "Lessons for beginners",
+    "adText": "individual or group lessons from 35$ / hour. equipment included",
+    "adAuthor": "Ken",
+    "email": "ken@gmail.com"
+  },
+  {
+    "sportName": "kitesurfing",
+    "title": "Kite surfing for beginner",
+    "adText": "one to one lessons. equipment included 65$/hour",
+    "adAuthor": "John",
+    "email": "john@gmail.com"
+  },
+  {
+    "sportName": "scubadiving",
+    "title": "Get you diving dertificates!",
+    "adText": "all level certificates-equipments supplied-From-price on request",
+    "adAuthor": "Maria",
+    "email": "maria@gmail.com"
+  }
+]
