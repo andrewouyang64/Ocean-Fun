@@ -17,7 +17,7 @@ export const QUERY_USER = gql`
 
 export const QUERY_ADS = gql`
   query getAds {
-    ads {
+    ads() {
       _id
       adText
       adAuthor

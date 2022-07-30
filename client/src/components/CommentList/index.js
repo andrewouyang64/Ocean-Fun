@@ -1,6 +1,6 @@
 import React from 'react';
-
-const CommentList = ({ comments,}) => {
+// comments = [{author: 'author1', {content:'Excellent trainer'}, {createdAt:date}]
+const CommentList = ({ comments}) => {
   if (!comments.length) {
     return <h3>No Comment posted Yet</h3>;
   }
@@ -8,9 +8,11 @@ const CommentList = ({ comments,}) => {
   return (
     <div className='commentList'>
       
-        {comments.map((comment) => (
+        {comments.map((item) => (
             <div className='comment'>
-                {comment}
+              <p>{item.content}</p> <br/>
+              <p>commented by:{item.author} on {item.createdAt}</p>
+
             </div>
         ))}
 

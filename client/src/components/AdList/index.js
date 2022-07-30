@@ -1,22 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const adList = ({ ads,}) => {
+const AdList = ({ ads}) => {
+  const { data: { ads } } = ads
+  // const ads = {data: {ads: [{title: 'asdsad', desc: 'x'}, {title: 'ásda', desc: 'x'}]}}
   if (!ads.length) {
     return <h3>No Ad posted Yet</h3>;
   }
 
   return (
     <div className='instructorList'>
-      {ads.map((title) => (
+      {ads.map(({title}) => (
             <div className='title'>
-                {title}
+                <h3>{title}</h3>
                 </div>
             ))}
 
             <div className='addNewAd'>
-                <Link to ={'/newAd'}>
-                    Create New ad
+                <Link to ='/AdForm'>
+                    Create New Ad
                  </Link>
              </div>                
       
@@ -24,4 +26,4 @@ const adList = ({ ads,}) => {
   );
 };
 
-export default adList;
+export default AdList;
