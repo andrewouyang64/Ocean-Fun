@@ -58,6 +58,11 @@ function App() {
                                 path="/signup"
                                 element={<Signup />}
                             />
+                            <Route
+                                path="/signup"
+                                element={<ViewAd />}
+                            />
+
                         </Routes>
                     </div>
                 </div>
