@@ -1,7 +1,7 @@
-
-const Ad = require('./Ad');
+const Sport = require('./Sport');
 const User = require('./User');
+const Ad = require('./Ad');
 
 
-module.exports = { Ad, User };
+module.exports = { Sport, User, Ad };
 
