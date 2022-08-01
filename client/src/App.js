@@ -11,7 +11,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Sport from './pages/Sport';
+import ViewAd from './pages/ViewAd';
+import ViewAd from './pages/AdForm';
 import Header from './components/Header';
 
 // Construct our main GraphQL API endpoint
@@ -61,6 +62,10 @@ function App() {
                             <Route
                                 path="/signup"
                                 element={<ViewAd />}
+                            />
+                            <Route
+                                path="/adForm"
+                                element={<AdForm />}
                             />
 
                         </Routes>
