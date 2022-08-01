@@ -2,13 +2,7 @@ const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const adSchema = new Schema({
-    sportName: {
-        type: String,
-        required: true,
-        minlength: 1,
-        maxlength: 100,
-        trim: true,
-    },
+
     title: {
         type: String,
         required: true,
@@ -16,6 +10,7 @@ const adSchema = new Schema({
         maxlength: 100,
         trim: true,
     },
+
     adText: {
         type: String,
         required: true,
@@ -38,6 +33,11 @@ const adSchema = new Schema({
         default: Date.now,
         get: (timestamp) => dateFormat(timestamp),
     },
+    // sportName: {
+    //     type: Schema.Types.String,
+    //     ref: 'Sport'
+    // },
+
     comments: [
         {
             commentText: {
@@ -57,7 +57,8 @@ const adSchema = new Schema({
             },
         },
     ],
-});
+},
+);
 
 const Ad = model('Ad', adSchema);
 
