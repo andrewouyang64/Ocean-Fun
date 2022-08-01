@@ -1,2 +1,11 @@
-//Dummy code line for github only
-const a= 1 
+const mongoose = require('mongoose');
+
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/programming-thoughts',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
+
+module.exports = mongoose.connection;
