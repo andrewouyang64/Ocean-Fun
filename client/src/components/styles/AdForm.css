@@ -1,0 +1,47 @@
+.newad {
+    display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+  .adform {
+    
+      width: 450px;
+      background-color: gainsboro;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+    
+  }
+  
+  .formcontent {
+    margin-left: 16.6%;
+    margin-right: 16.6%;
+  }
+  
+  .title {
+    background-color: white;
+    border: 1px;
+    color: black;
+    border-color:  rgb(139, 143, 143);
+    border-style: solid; 
+  }
+  
+  .ad {
+    /*resize: vertical;*/
+    background-color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+    padding: 5px;
+    border-color:2px rgb(152, 156, 156);
+    border-style: solid;
+  }
+  
+  
+  .formcontent button {
+    border-color: aqua;
+    background-color: rgb(84, 85, 91);
+    color: white;
+    border-radius: 3px;
+  }
+  
