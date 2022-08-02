@@ -24,8 +24,8 @@ export default function ViewAd() {
     const sport = data?.sport || {};
 
     // const [currentCard, setCurrentCard] = useState('');
-    const [isShown, setIsShown] = useState(false);
-    // const [adId, setAdId] = useState('')
+    // const [isShown, setIsShown] = useState(false);
+    const [adId, setAdId] = useState()
 
     // This method is checking to see what the value of `currentCard` is. Depending on the value of currentPage, we return the corresponding component to render.
     // const renderCard = () => {
@@ -35,11 +35,11 @@ export default function ViewAd() {
     //     }
     // };
     // const handleCardChange = (card) => setCurrentCard(card);
-    const handleClick = (event) => {
+    const handleClick = (adId) => {
 
 
-        // setAdId(ad._id);
-        setIsShown(true);
+        setAdId(adId);
+        // setIsShown(true);
     };
 
     console.log(sport.name)
@@ -68,8 +68,7 @@ export default function ViewAd() {
                         Post you Ad!
                     </Link>
                 </div>
-                {isShown && <SingleAd
-                />}
+                {adId && <SingleAd adId={adId} />}
                 {/* {renderCard()} */}
                 {/* <div classNam
                    e="col-sm-6">

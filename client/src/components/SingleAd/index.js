@@ -9,9 +9,9 @@ import CommentForm from '../CommentForm';
 
 import { QUERY_SINGLE_AD } from '../../utils/queries';
 
-const SingleAd = () => {
+const SingleAd = ({ adId }) => {
     // Use `useParams()` to retrieve value of the route parameter `:profileId`
-    const { adId } = useParams();
+    // const { adId } = useParams();
     console.log(adId)
     const { loading, data } = useQuery(QUERY_SINGLE_AD, {
         // pass URL parameter

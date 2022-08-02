@@ -6,7 +6,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Signup from './pages/Signup';
@@ -15,6 +15,7 @@ import ViewAd from './pages/ViewAd';
 import Header from './components/Header';
 import AdForm from './pages/AdForm';
 
+import auth from './utils/auth';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -54,11 +55,15 @@ function App() {
               />
               <Route
                 path="/login"
-                element={<Login />}
+                element={
+                  auth.loggedIn() ? <Navigate to="/" /> : <Login />
+                }
               />
               <Route
                 path="/signup"
-                element={<Signup />}
+                element={
+                  auth.loggedIn() ? <Navigate to="/" /> : <Signup />
+                }
               />
               <Route
                 path="/sport/:name"
@@ -66,7 +71,9 @@ function App() {
               />
               <Route
                 path="/form/:name"
-                element={<AdForm />}
+                element={
+                  auth.loggedIn() ? <AdForm /> : <Navigate to="/login" />
+                }
               />
 
             </Routes>

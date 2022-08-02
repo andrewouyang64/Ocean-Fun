@@ -21,7 +21,7 @@ const AdList = ({ ads = [], handleClick }) => {
 
                                 href="#home"
                                 // onClick={() => handleCardChange('SinlgeAd')}
-                                onClick={() => handleClick()}
+                                onClick={() => handleClick(ad._id)}
 
                             >
                                 <div className=" btn p-3 bg-dark text-light">
