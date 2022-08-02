@@ -35,8 +35,8 @@ export const QUERY_SPORTS = gql`
 
 
 export const QUERY_SINGLE_SPORT = gql`
-  query getSingleSport ($sportName: String!){
-    sport (sportName: $sportName) {
+  query getSingleSport ($name: String!){
+    sport (name: $name) {
       _id
       name
       ads {

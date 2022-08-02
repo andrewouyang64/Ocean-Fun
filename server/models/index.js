@@ -4,4 +4,3 @@ const Ad = require('./Ad');
 
 
 module.exports = { Sport, User, Ad };
-
