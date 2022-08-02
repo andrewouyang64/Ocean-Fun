@@ -15,11 +15,6 @@ const typeDefs = gql`
     name: String
     ads: [Ad]
   }
-  # enum Name {
-  #   surfing
-  #   kitesurfing
-  #   scubadiving
-  # }
   type Ad {
     _id: ID
     sportName: String
@@ -27,7 +22,7 @@ const typeDefs = gql`
     adText: String
     adAuthor: String
     email: String
-    # createdAt:Date
+    createdAt:String
     comments: [Comment]!
   }
 
@@ -56,9 +51,9 @@ const typeDefs = gql`
     me: User
   }
   type Mutation {
-    # addUser(username: String!, email: String!, password: String!): Auth
-    # login(email: String!, password: String!): Auth
-    addAd(title:String!, adText: String!, email: String!): Ad
+    addUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
+    addAd(sportName:String!, title:String!, adText: String!, adAuthor: String! email: String!): Ad
     addComment(adId: ID!, commentText: String!): Ad
     # removeAd(adId: ID!): Ad
     # removeComment(adId: ID!, adId: ID!): Ad

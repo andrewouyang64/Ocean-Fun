@@ -33,10 +33,10 @@ const adSchema = new Schema({
         default: Date.now,
         get: (timestamp) => dateFormat(timestamp),
     },
-    // sportName: {
-    //     type: Schema.Types.String,
-    //     ref: 'Sport'
-    // },
+    sportName: {
+        type: Schema.Types.String,
+        ref: 'Sport'
+    },
 
     comments: [
         {
@@ -63,3 +63,4 @@ const adSchema = new Schema({
 const Ad = model('Ad', adSchema);
 
 module.exports = Ad;
+

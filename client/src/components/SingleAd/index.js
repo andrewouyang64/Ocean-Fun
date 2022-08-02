@@ -12,7 +12,7 @@ import { QUERY_SINGLE_AD } from '../../utils/queries';
 const SingleAd = () => {
     // Use `useParams()` to retrieve value of the route parameter `:profileId`
     const { adId } = useParams();
-
+    console.log(adId)
     const { loading, data } = useQuery(QUERY_SINGLE_AD, {
         // pass URL parameter
         variables: { adId: adId },
@@ -24,7 +24,7 @@ const SingleAd = () => {
         return <div>Loading...</div>;
     }
     return (
-        <div className="my-3">
+        <div className="col">
             <h3 className="card-header bg-dark text-light p-2 m-0">
                 {ad.adAuthor} <br />
                 <span style={{ fontSize: '1rem' }}>
