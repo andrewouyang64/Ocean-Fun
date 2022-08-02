@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { Link } from 'react-router-dom';
-
+// import { Link } from 'react-router-dom';
 import { ADD_AD } from '../utils/mutations';
-import { QUERY_ADS, QUERY_ME } from '../utils/queries';
+import { QUERY_ADS, QUERY_SINGLE_SPORT } from '../utils/queries';
 
 import Auth from '../utils/auth';
 
 const AdForm = () => {
-
+    const navigate = useNavigate()
     const { name: sportName } = useParams();
 
     const { data } = useQuery(QUERY_ADS, {
@@ -28,25 +27,26 @@ const AdForm = () => {
     const [characterCount, setCharacterCount] = useState(0);
 
     const [addAd, { error }] = useMutation(ADD_AD, {
-        update(cache, { data: { addAd } }) {
-            try {
-                const { ads } = cache.readQuery({ query: QUERY_ADS });
-
-                cache.writeQuery({
-                    query: QUERY_ADS,
-                    data: { ads: [addAd, ...ads] },
-                });
-            } catch (e) {
-                console.error(e);
+        refetchQueries: [
+            {
+                query: QUERY_SINGLE_SPORT,
+                variables: { name: sportName }
             }
+        ]
+        // update(cache, { data: { addAd } }) {
+        //     try {
+        //         const { ads } = cache.readQuery({ query: QUERY_ADS });
 
-            // update me object's cache
-            const { me } = cache.readQuery({ query: QUERY_ME });
-            cache.writeQuery({
-                query: QUERY_ME,
-                data: { me: { ...me, ads: [...me.ads, addAd] } },
-            });
-        },
+        //         cache.writeQuery({
+        //             query: QUERY_ADS,
+        //             data: { ads: [addAd, ...ads] },
+        //         });
+        //     } catch (e) {
+        //         console.error(e);
+        //     }
+
+        //     // update me object's cache
+        // },
     });
 
     const handleFormSubmit = async (event) => {
@@ -65,7 +65,7 @@ const AdForm = () => {
             });
 
             setAdText('');
-
+            navigate(`/sport/${sportName}`)
         } catch (err) {
             console.error(err);
         }
@@ -114,12 +114,12 @@ const AdForm = () => {
 
                     <div className="col-12 col-lg-3">
 
-                        <Link
+                        <button
                             className="btn btn-primary btn-block btn-squared"
-                            to={`/sport/${sportName}`}
+
                         >
                             Add your Ad!
-                        </Link>
+                        </button>
 
 
 

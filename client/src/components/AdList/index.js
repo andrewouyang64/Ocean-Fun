@@ -4,7 +4,7 @@ const AdList = ({ ads = [], handleClick }) => {
     if (!ads.length) {
         return <h3>No ads Yet</h3>;
     }
-    console.log(ads)
+    // const sortedAds = ads.sort
     return (
         <>
             <h3
