@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import SportList from '../components/SportList';
+import '../components/styles/home.css';
 // import surfing from '../Images/surfing.jpg'
 // import Kitesurfing from '../Images/Kitesurfing.jpeg'
 // import Scubadiving from '../Images/Scubadiving.jpg'

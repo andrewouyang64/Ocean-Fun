@@ -4,20 +4,14 @@ import { Link } from 'react-router-dom';
 
 export default function SportList(props) {
     return (
-        <div className="row">
+        <div className="homePage">
 
             {props.sports.map(sport => (
-                <div key={sport.name} className="col-12">
-                    <Link className="btn btn-lg btn-light m-2" to={`/sport/${sport.name}`}>
-                        <div className="col-sm-6 d-flex justify-content-center">
-                            {/* <div className="card"> */}
-                            <div className="card-body">
-                                {/* <img src="..." class="card-img" alt="..."> */}
-                                <div className="card-img-overlay">
-                                    <h5 className="card-title">${sport.name}</h5>
-                                    {/* </div> */}
-                                </div>
-                            </div>
+                <div key={sport.name} className="aa">
+                    <Link  to={`/sport/${sport.name}`}>
+                        <div >
+                           <h2 className='sportName' >{sport.name}</h2>
+                            <h3 className='training'>{sport.name} Traning Courses</h3>     
                         </div>
                     </Link>
                 </div>

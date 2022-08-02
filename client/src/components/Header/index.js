@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/Header.css';
 
 import Auth from '../../utils/auth';
 
@@ -9,12 +10,12 @@ const Header = () => {
         Auth.logout();
     };
     return (
-        <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
+        <header className="flex-row align-center head">
             <div className="container flex-row justify-space-between-lg justify-center align-center">
                 <div>
-                    <Link className="text-light" to="/">
-                        <h1 className="m-0">OCEAN FUN</h1>
-                    </Link>
+                    {/* <Link className="text-light" to="/"> */}
+                        <h1>OCEAN FUN</h1>
+                    {/* </Link> */}
                 </div>
                 <div>
                     {Auth.loggedIn() ? (
