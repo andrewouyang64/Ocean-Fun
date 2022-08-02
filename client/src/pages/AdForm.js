@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+import { Link } from 'react-router-dom';
 
 import { ADD_AD } from '../utils/mutations';
 import { QUERY_ADS, QUERY_ME } from '../utils/queries';
@@ -11,7 +12,7 @@ import Auth from '../utils/auth';
 
 const AdForm = () => {
 
-    const { sportName } = useParams();
+    const { name: sportName } = useParams();
 
     const { data } = useQuery(QUERY_ADS, {
         // pass URL parameter
@@ -52,13 +53,14 @@ const AdForm = () => {
         event.preventDefault();
 
         try {
+            const profile = Auth.getProfile().data
             const { data } = await addAd({
                 variables: {
                     sportName,
                     title,
                     adText,
-                    adAuthor: Auth.getProfile().data.username,
-                    email: data.email
+                    adAuthor: profile.username,
+                    email: profile.email
                 },
             });
 
@@ -106,14 +108,21 @@ const AdForm = () => {
                             value={adText}
                             name="adText"
                             onChange={handleChange}
-                            placeholder="Here's a new thought..."
+                            placeholder="Here's a new ad..."
                         ></textarea>
                     </div>
 
                     <div className="col-12 col-lg-3">
-                        <button className="btn" type="submit">
+
+                        <Link
+                            className="btn btn-primary btn-block btn-squared"
+                            to={`/sport/${sportName}`}
+                        >
                             Add your Ad!
-                        </button>
+                        </Link>
+
+
+
                     </div>
 
                 </form>

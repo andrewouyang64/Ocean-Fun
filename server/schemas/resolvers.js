@@ -58,13 +58,14 @@ const resolvers = {
 
       return { token, user };
     },
-    addAd: async (parent, { sportName, title, adText, email }, context) => {
+    addAd: async (parent, { sportName, title, adText, email, adAuthor }, context) => {
       if (context.user) {
         const ad = await Ad.create({
+          sportName,
           title,
           adText,
           email,
-          adAuthor: context.user.username,
+          adAuthor
 
         });
         // await User.findOneAndUpdate(
@@ -75,7 +76,7 @@ const resolvers = {
           { name: sportName },
           {
             $addToSet: {
-              ads: ad_id
+              ads: ad._id
             }
           });
         return ad;

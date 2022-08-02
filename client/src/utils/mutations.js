@@ -25,9 +25,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_AD = gql`
-  mutation addAd($sportName:String!, $title:String!, $adText: String!,$adAuthor:String! $email: String!) {
-    addAd(sportName: $sportName, setTitle: $title, adText: $adText, adAuthor:$adAuthor, email: $email) {
-      _id
+  mutation addAd($sportName:String!, $title:String!, $adText: String!,$adAuthor:String!, $email: String!) {
+    addAd(sportName: $sportName, title: $title, adText: $adText, adAuthor:$adAuthor, email: $email) {
       sportName
       title
       adText
