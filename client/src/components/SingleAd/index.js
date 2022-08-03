@@ -25,7 +25,7 @@ const SingleAd = ({ adId }) => {
     }
     return (
         <div className="col">
-            <h3 className="card-header bg-dark text-light p-2 m-0">
+            <h3 className="card-header singAd text-light p-2 m-0">
                 {ad.adAuthor} <br />
                 <span style={{ fontSize: '1rem' }}>
                     had this ad on {ad.createdAt}
@@ -46,7 +46,10 @@ const SingleAd = ({ adId }) => {
 
 
                 </blockquote>
-                <h4>Contact me at: {ad.email}</h4>
+
+                <h4 className='contact' >contact me at :{ad.email}</h4>
+
+              
             </div>
 
             <div className="my-5">

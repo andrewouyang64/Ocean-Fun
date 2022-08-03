@@ -6,7 +6,7 @@ import { useQuery } from '@apollo/client';
 // import { Link } from 'react-router-dom';
 import { ADD_AD } from '../utils/mutations';
 import { QUERY_ADS, QUERY_SINGLE_SPORT } from '../utils/queries';
-
+import '../components/styles/AdForm.css';
 import Auth from '../utils/auth';
 
 const AdForm = () => {
@@ -83,51 +83,47 @@ const AdForm = () => {
     };
 
     return (
-        <div>
-            <h3>Post your Ad</h3>
-
-            <>
+       
+            <div className='newAd'>
+                <h3>Post your Ad</h3>        
                 <p
                     className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''
                         }`}
                 >
                     Character Count: {characterCount}/280
                 </p>
-                <form
-                    className=" form flex-row justify-center justify-space-between-md align-center"
-                    onSubmit={handleFormSubmit}
-                >
-                    <div className="col-12 col-lg-9">
-                        <textarea
+                <div className='adForm'>
+                <form className="formcontent" >
+               
+                   
+                        <textarea className='title'
                             value={title}
                             name="title"
+                            cols="45"
                             onChange={handleChange}
                             placeholder="title of you Ad"
-                        ></textarea>
-                        <textarea
+                        ></textarea><br/><br/>
+                        <textarea className='ad'
                             value={adText}
                             name="adText"
+                            cols="45"
+                            rows="6"
                             onChange={handleChange}
                             placeholder="Here's a new ad..."
                         ></textarea>
-                    </div>
+                    
 
-                    <div className="col-12 col-lg-3">
-
-                        <button
-                            className="btn btn-primary btn-block btn-squared"
-
-                        >
-                            Add your Ad!
+                        <button type='button' onClick={handleFormSubmit}>
+                            Submit Your Ad
                         </button>
-
-
-
-                    </div>
+                    
 
                 </form>
-            </>
-        </div>
+                </div>
+            </div>
+            
+        
+       
     );
 
 }

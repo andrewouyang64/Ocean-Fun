@@ -41,7 +41,7 @@ const CommentForm = ({ adId }) => {
 
     return (
         <div>
-            <h4>What are your thoughts on this thought?</h4>
+            <h4 className='giveComment'>Please give your comment</h4>
 
             {Auth.loggedIn() ? (
                 <>
@@ -52,11 +52,12 @@ const CommentForm = ({ adId }) => {
                         Character Count: {characterCount}/280
                         {error && <span className="ml-2">{error.message}</span>}
                     </p>
+                    <div className='commentForm'>
                     <form
                         className="flex-row justify-center justify-space-between-md align-center"
                         onSubmit={handleFormSubmit}
                     >
-                        <div className="col-12 col-lg-9">
+                        {/* <div className="col-12 col-lg-9"> */}
                             <textarea
                                 name="commentText"
                                 placeholder="Add your comment..."
@@ -65,19 +66,20 @@ const CommentForm = ({ adId }) => {
                                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                                 onChange={handleChange}
                             ></textarea>
-                        </div>
+                        {/* </div> */}
 
-                        <div className="col-12 col-lg-3">
-                            <button className="btn btn-primary btn-block py-3" type="submit">
-                                Add Comment
+                        {/* <div className="col-12 col-lg-3"> */}
+                            <button className="commentButton" type="submit">
+                                Submit
                             </button>
-                        </div>
+                        {/* </div> */}
                     </form>
+                    </div>
                 </>
             ) : (
                 <p>
                     You need to be logged in to share your thoughts. Please{' '}
-                    <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+                    <Link className='ls' to="/login">login</Link> or <Link className='ls' to="/signup">signup.</Link>
                 </p>
             )}
         </div>

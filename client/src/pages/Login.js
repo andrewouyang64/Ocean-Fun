@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import '../components/styles/login.css';
 
 import Auth from '../utils/auth';
 
@@ -41,10 +42,11 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+    // <main className="flex-row justify-center mb-4">
+    <div><br></br><br></br>
+      <div className="loginPage">
+        <div className="login">
+          <h4 className="card-header loginColor text-light p-2">Login</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -70,7 +72,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="loginButton"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
@@ -87,7 +89,8 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-    </main>
+      </div>
+    // </main>
   );
 };
 

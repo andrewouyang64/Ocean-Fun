@@ -1,0 +1,95 @@
+
+  .viewAd {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.viewAd h3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.viewAd h5 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.adtitle {
+  background-color: rgb(27, 89, 147);
+  color: white;
+  padding: 5px;
+}
+.bb {
+    
+    margin: 20px;
+    width: 450px;
+    background-color: rgb(93, 144, 207);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+   
+  }
+  
+  h3 {
+    padding: 5px;
+  }
+
+  .titles h3 {
+
+    background-color: rgb(63, 135, 147);
+    color: white;
+    margin: 5px;
+    /* box-shadow: black solid 3px; */
+
+  }
+
+.titles h3:hover {
+  background-color: rgb(28, 87, 96);
+  cursor: pointer;
+}
+
+button {
+    position: relative;
+    left: 40%;
+    padding: 5px;
+    cursor: pointer;
+    
+  }
+
+.addButton {
+  background-color:rgb(37, 91, 141);
+  color: white;
+}
+
+.singAd {
+  background-color:rgb(27, 89, 147);
+}
+
+.contact {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.comment {
+  background-color:rgb(27, 89, 147);
+}
+
+.giveComment {
+  font-size: 1.2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.commentButton {
+  background-color: rgb(27, 89, 147);
+  color: white;
+  border-radius: 5px;
+}
+.commentButton:hover {
+  background-color: rgb(75, 131, 222);
+}
+
+.ls {
+  color: white;
+}
