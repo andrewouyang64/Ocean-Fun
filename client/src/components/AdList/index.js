@@ -4,7 +4,10 @@ const AdList = ({ ads = [], handleClick }) => {
     if (!ads.length) {
         return <h3>No ads Yet</h3>;
     }
-    // const sortedAds = ads.sort
+
+    console.log(ads)
+    // const sortedAds = ads.sort({ createdAt: -1 });
+    // console.log(sortedAds)
     return (
         <>
             {/* <h3
@@ -14,13 +17,13 @@ const AdList = ({ ads = [], handleClick }) => {
                 ads
             </h3> */}
             <div className="flex-row my-4">
+
                 {ads &&
                     ads.map((ad) => (
                         <div key={ad._id} className="col-12 mb-3 pb-3">
                             <a
 
                                 href="#home"
-                                // onClick={() => handleCardChange('SinlgeAd')}
                                 onClick={() => handleClick(ad._id)}
 
                             >
@@ -31,11 +34,14 @@ const AdList = ({ ads = [], handleClick }) => {
                                             on {ad.createdAt}
                                         </span>
                                     </h5>
+
                                     <p className="card-body">{ad.adText}</p>
+
                                 </div>
                             </a>
                         </div>
-                    ))}
+                    ))
+                }
             </div>
         </>
     );

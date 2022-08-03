@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import the `useParams()` hook
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import CommentList from '../CommentList';
@@ -43,8 +43,13 @@ const SingleAd = ({ adId }) => {
                 >
                     {ad.title}
                     {ad.adText}
+
+
                 </blockquote>
+
                 <h4 className='contact' >contact me at :{ad.email}</h4>
+
+              
             </div>
 
             <div className="my-5">

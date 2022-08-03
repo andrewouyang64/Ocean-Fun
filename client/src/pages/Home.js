@@ -1,10 +1,12 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import SportList from '../components/SportList';
+
 import '../components/styles/home.css';
 // import '../Images/surfing.jpg';
 // import Kitesurfing from '../Images/Kitesurfing.jpeg'
 // import Scubadiving from '../Images/Scubadiving.jpg'
+
 
 import { QUERY_SPORTS } from '../utils/queries';
 
@@ -18,7 +20,6 @@ export default function Home() {
     <main>
       <SportList
         sports={sports}
-      // sportImg={sportImg} 
       />;
     </main>
   )
