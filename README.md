@@ -1,7 +1,7 @@
 # Project-3: Ocean Fun
 ## Description
 
-This project is to build an application that can help trainer and trainee communicate with each others to book a training class as: surfing, sky surfing and scuba diving. The trainer can post their advertisement and trainee can search ads for each activity, they can leave/read comment for each ads to review the training session/trainee is good or bad.
+This project is to build an application that can help trainer and trainee communicate with each others to book a training class as: surfing, sky surfing and scuba diving. The trainer can post their advertisement and trainee can search ads for each activity, they can leave/read comment for each ads to review the training session/trainee is good or not good
 
 ## Table of Contents
 
