@@ -6,16 +6,8 @@ const AdList = ({ ads = [], handleClick }) => {
     }
 
     console.log(ads)
-    // const sortedAds = ads.sort({ createdAt: -1 });
-    // console.log(sortedAds)
     return (
         <>
-            {/* <h3
-                className=" display-inline-block"
-                style={{ borderBottom: '1px dotted #1a1a1a' }}
-            >
-                ads
-            </h3> */}
             <div className="flex-row my-4">
 
                 {ads &&

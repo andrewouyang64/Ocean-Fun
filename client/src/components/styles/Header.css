@@ -1,12 +1,14 @@
 .head {
     background-color: rgb(13, 50, 118);
-    color: white;
+    color: rgb(181, 232, 243);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+
 }
 
 .head h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(181, 232, 243);
+
 }
 
 .logged {

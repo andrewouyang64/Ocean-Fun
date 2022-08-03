@@ -41,7 +41,7 @@ const CommentForm = ({ adId }) => {
 
     return (
         <div>
-            <h4 className='giveComment'>Please give your comment</h4>
+            <h4 className='giveComment'>Please review your experience</h4>
 
             {Auth.loggedIn() ? (
                 <>
@@ -53,32 +53,28 @@ const CommentForm = ({ adId }) => {
                         {error && <span className="ml-2">{error.message}</span>}
                     </p>
                     <div className='commentForm'>
-                    <form
-                        className="flex-row justify-center justify-space-between-md align-center"
-                        onSubmit={handleFormSubmit}
-                    >
-                        {/* <div className="col-12 col-lg-9"> */}
+                        <form
+                            className="flex-row justify-center justify-space-between-md align-center"
+                            onSubmit={handleFormSubmit}
+                        >
                             <textarea
                                 name="commentText"
-                                placeholder="Add your comment..."
+                                placeholder="Add your review..."
                                 value={commentText}
                                 className="form-input w-100"
                                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                                 onChange={handleChange}
                             ></textarea>
-                        {/* </div> */}
 
-                        {/* <div className="col-12 col-lg-3"> */}
                             <button className="commentButton" type="submit">
                                 Submit
                             </button>
-                        {/* </div> */}
-                    </form>
+                        </form>
                     </div>
                 </>
             ) : (
                 <p>
-                    You need to be logged in to share your thoughts. Please{' '}
+                    You need to be logged in to share your reviews. Please{' '}
                     <Link className='ls' to="/login">login</Link> or <Link className='ls' to="/signup">signup.</Link>
                 </p>
             )}
