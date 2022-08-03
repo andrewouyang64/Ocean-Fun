@@ -13,7 +13,7 @@ const AdForm = () => {
     const navigate = useNavigate()
     const { name: sportName } = useParams();
 
-    const { data } = useQuery(QUERY_ADS, {
+    useQuery(QUERY_ADS, {
         // pass URL parameter
         variables: { sportName: sportName },
 
@@ -54,7 +54,7 @@ const AdForm = () => {
 
         try {
             const profile = Auth.getProfile().data
-            const { data } = await addAd({
+            await addAd({
                 variables: {
                     sportName,
                     title,

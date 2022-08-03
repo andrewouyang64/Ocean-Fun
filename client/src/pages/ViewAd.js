@@ -2,9 +2,6 @@ import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
-
-// import AdForm from '../components/AdForm';
 import AdList from '../components/AdList';
 import SingleAd from '../components/SingleAd';
 
@@ -20,26 +17,10 @@ export default function ViewAd() {
         // pass URL parameter
         variables: { name: name },
     });
-
     const sport = data?.sport || {};
-
-    // const [currentCard, setCurrentCard] = useState('');
-    // const [isShown, setIsShown] = useState(false);
     const [adId, setAdId] = useState()
-
-    // This method is checking to see what the value of `currentCard` is. Depending on the value of currentPage, we return the corresponding component to render.
-    // const renderCard = () => {
-    //     if (currentCard === 'SingleAd') {
-    //         return <SingleAd
-    //         />;
-    //     }
-    // };
-    // const handleCardChange = (card) => setCurrentCard(card);
     const handleClick = (adId) => {
-
-
         setAdId(adId);
-        // setIsShown(true);
     };
 
     console.log(sport.name)
@@ -69,13 +50,6 @@ export default function ViewAd() {
                     </Link>
                 </div>
                 {adId && <SingleAd adId={adId} />}
-                {/* {renderCard()} */}
-                {/* <div classNam
-                   e="col-sm-6">
-                        <div className="card-body">
-                            <SingleAd />
-                        </div>
-                    </div> */}
             </div>
         </div>
 
