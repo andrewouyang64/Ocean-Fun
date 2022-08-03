@@ -63,7 +63,7 @@ export const QUERY_ADS = gql`
         createdAt
       }
     }
-  
+
 `;
 
 
@@ -86,21 +86,3 @@ export const QUERY_SINGLE_AD = gql`
   }
 `;
 
-
-
-
-export const QUERY_ME = gql`
-  query me {
-    me {
-      _id
-      username
-      email
-      ads {
-        _id
-        adText
-        adAuthor
-        createdAt
-      }
-    }
-  }
-`;

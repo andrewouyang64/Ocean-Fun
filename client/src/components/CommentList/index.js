@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommentList = ({ comments = [] }) => {
     if (!comments.length) {
-        return <h3>No Comments Yet</h3>;
+        return <h3>No Reviews Yet</h3>;
     }
 
     return (
@@ -11,7 +11,7 @@ const CommentList = ({ comments = [] }) => {
                 className="display-inline-block"
                 style={{ borderBottom: '1px dotted #1a1a1a' }}
             >
-                Comments
+                Reviews
             </h3>
             <div className="flex-row my-4">
                 {comments &&

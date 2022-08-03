@@ -2,11 +2,7 @@ import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import '../components/styles/ViewAd.css';
-
-// import AdForm from '../components/AdForm';
-
 import AdList from '../components/AdList';
 import SingleAd from '../components/SingleAd';
 
@@ -31,13 +27,13 @@ export default function ViewAd() {
     console.log(sport.name)
     console.log(sport.ads)
 
+
     if (loading) {
         return <div>Loading...</div>;
     }
-
     return (
         <div className="viewAd">
-            <div className=" adTitle bb">
+            <div className="col adTitle bb">
                 <h3>{sport.name} ads</h3>
                 <div>
                     <AdList
@@ -47,18 +43,18 @@ export default function ViewAd() {
                 </div>
                 <div>
                     <Link
-                        className="btn btn-block btn-squared addButton"
+                        className="btn btn-block btn-squared addButton rounded"
                         to={`/form/${sport.name}`}
                     >
-                        Post you Ad!
+                        Post your Ad!
                     </Link>
                 </div>
             </div>
 
-            <div className='singleAd bb'>
-                {adId && <SingleAd adId={adId} />}
+            <div className='col'>
+                {adId && <SingleAd className="singleAd bb" adId={adId} />}
             </div>
-           
+
         </div>
 
     );

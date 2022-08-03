@@ -11,23 +11,22 @@ const Header = () => {
     };
     return (
         <header className="flex-row align-center head">
-            <div className="container flex-row justify-space-between-lg justify-center align-center">
+            <div className="container flex-row justify-space-between-lg  align-center">
                 <div>
-                    {/* <Link className="text-light" to="/"> */}
+                    <Link to="/">
                         <h1>OCEAN FUN</h1>
-                    {/* </Link> */}
+                    </Link>
+
                 </div>
                 <div>
                     {Auth.loggedIn() ? (
                         <>
-                            {/* <Link className="btn btn-lg btn-info m-2" to="/me"> */}
-                            <span className='logged'>
-                                {Auth.getProfile().data.username} logged in
-                            {/* </Link> */}
+                            <span className="logged">
+                                {Auth.getProfile().data.username} is logged in
                             </span>
-                            <button className="btn btn-lg btn-light m-2" onClick={logout}>
+                            <span className="btn btn-lg btn-light m-2" onClick={logout}>
                                 Logout
-                            </button>
+                            </span>
                         </>
                     ) : (
                         <>
