@@ -23,7 +23,7 @@
 .bb {
     
     margin: 20px;
-    width: 450px;
+    width: 38%;
     background-color: rgb(93, 144, 207);
     padding: 20px;
     border-radius: 10px;
@@ -49,13 +49,13 @@
   cursor: pointer;
 }
 
-button {
+/* button {
     position: relative;
     left: 40%;
     padding: 5px;
     cursor: pointer;
     
-  }
+  } */
 
 .addButton {
   background-color:rgb(37, 91, 141);
@@ -66,6 +66,9 @@ button {
   background-color:rgb(27, 89, 147);
 }
 
+.adFont {
+  font-size: 1.2rem;
+}
 .contact {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 1rem;
@@ -92,4 +95,11 @@ button {
 
 .ls {
   color: white;
+}
+
+@media (max-width: 593px) {
+  .adFont {
+    font-size: 0.9rem;
+  }
+
 }

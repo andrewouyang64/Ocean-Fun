@@ -9,7 +9,7 @@ export default function SportList(props) {
             {props.sports.map(sport => (
                 <div key={sport.name} id={sport.name} className="aa">
                     <Link  to={`/sport/${sport.name}`}>
-                        <div >
+                        <div className='sportDiv' >
                            <h3 className='sportName' >{sport.name}</h3>
                             <h4 className='training'>Traning Courses</h4>     
                         </div>

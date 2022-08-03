@@ -41,7 +41,7 @@ const CommentForm = ({ adId }) => {
 
     return (
         <div>
-            <h4 className='giveComment'>Please give your comment</h4>
+            <h4 className='giveComment'>What do you think?</h4>
 
             {Auth.loggedIn() ? (
                 <>

@@ -22,7 +22,7 @@
     position: relative;
     top: 1rem;
     margin: 1.25rem;
-    width: 25%;
+    width: 26%;
     height: 400px;
     background-color: aqua;
     padding: 10px;
@@ -33,16 +33,15 @@
   }
   
   .sportName {
-    
     padding: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:black;
+    color:white;
   }
 
   .training {
    
     font-weight: lighter;
-    color: black;
+    color: white;
     padding: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
@@ -66,4 +65,27 @@
 
 }
 
-    
+@media (max-width: 858px) {
+.sportName {
+  font-size: 1.3rem;
+}
+
+.training {
+  font-size: 1.2rem;
+}
+  
+}
+
+@media (max-width: 664px) {
+  .sportName {
+    font-size: 1rem;
+    /* padding: 3px; */
+  }
+  
+  .training {
+    font-size: 0.8rem;
+    /* padding: 3px; */
+  }
+  
+      
+  }

@@ -92,7 +92,7 @@ const AdForm = () => {
                 >
                     Character Count: {characterCount}/280
                 </p>
-                <div className='adForm'>
+                <div className='card-body'>
                 <form className="formcontent" >
                
                    
@@ -101,7 +101,7 @@ const AdForm = () => {
                             name="title"
                             cols="45"
                             onChange={handleChange}
-                            placeholder="title of you Ad"
+                            placeholder="Title of you ad"
                         ></textarea><br/><br/>
                         <textarea className='ad'
                             value={adText}
