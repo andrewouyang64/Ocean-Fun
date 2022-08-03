@@ -15,7 +15,7 @@ const adSchema = new Schema({
         type: String,
         required: true,
         minlength: 1,
-        maxlength: 100,
+        maxlength: 280,
         trim: true,
     },
     adAuthor: {

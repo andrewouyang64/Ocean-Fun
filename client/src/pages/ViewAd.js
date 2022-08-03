@@ -2,7 +2,7 @@ import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import '../components/styles/ViewAd.css';
 
 // import AdForm from '../components/AdForm';
 import AdList from '../components/AdList';
@@ -50,10 +50,9 @@ export default function ViewAd() {
     }
 
     return (
-        <div className=" row card-body">
-            <div className=" col">
-                <h3>{sport.name}</h3>
-
+        <div className="viewAd">
+            <div className=" adTitle bb">
+                <h3>{sport.name} ads</h3>
                 <div>
                     <AdList
                         ads={sport.ads}
@@ -62,12 +61,15 @@ export default function ViewAd() {
                 </div>
                 <div>
                     <Link
-                        className="btn btn-primary btn-block btn-squared"
+                        className="btn btn-block btn-squared addButton"
                         to={`/form/${sport.name}`}
                     >
                         Post you Ad!
                     </Link>
                 </div>
+            </div>
+
+            <div className='singleAd bb'>
                 {adId && <SingleAd adId={adId} />}
                 {/* {renderCard()} */}
                 {/* <div classNam
@@ -77,6 +79,7 @@ export default function ViewAd() {
                         </div>
                     </div> */}
             </div>
+           
         </div>
 
     );

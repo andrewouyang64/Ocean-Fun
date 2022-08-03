@@ -2,30 +2,45 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+}
+
+#surfing{
+  background-image: url("../../Images/surfing.jpg");
+}
+
+#kitesurfing{
+  background-image: url("../../Images/Kitesurfing.jpg");
+}
+
+#scubadiving{
+  background-image: url("../../Images/Scubadiving.jpg");
 }
 
 .aa {
     position: relative;
     top: 1rem;
-    margin: 20px;
-    width: 280px;
+    margin: 1.25rem;
+    width: 25%;
     height: 400px;
     background-color: aqua;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
-    /* background-image: url("./images/river2.jpg"); */
+    /* background-image: url("../../Images/Scubadiving.jpg"); */
     
   }
   
   .sportName {
+    
     padding: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:black;
   }
 
   .training {
+   
     font-weight: lighter;
     color: black;
     padding: 5px;
@@ -34,7 +49,21 @@
 
   .aa:hover {
     background-color: rgb(12, 192, 192);
-    border-style: solid;
+    
     cursor: pointer;
   }
+
+  .footerButton {
+    /* background-color:rgb(161, 191, 219); */
+    display: flex;
+    justify-content: end;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.copyRight {
+  font-size: 1rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
     

@@ -14,6 +14,7 @@ import Login from './pages/Login';
 import ViewAd from './pages/ViewAd';
 import Header from './components/Header';
 import AdForm from './pages/AdForm';
+import Footer from './components/Footer';
 
 import auth from './utils/auth';
 
@@ -78,6 +79,7 @@ function App() {
 
             </Routes>
           </div>
+          <Footer/>
         </div>
       </Router>
     </ApolloProvider>

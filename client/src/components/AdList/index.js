@@ -7,12 +7,12 @@ const AdList = ({ ads = [], handleClick }) => {
     // const sortedAds = ads.sort
     return (
         <>
-            <h3
-                className="p-5 display-inline-block"
+            {/* <h3
+                className=" display-inline-block"
                 style={{ borderBottom: '1px dotted #1a1a1a' }}
             >
-                Sport Ads
-            </h3>
+                ads
+            </h3> */}
             <div className="flex-row my-4">
                 {ads &&
                     ads.map((ad) => (
@@ -24,9 +24,9 @@ const AdList = ({ ads = [], handleClick }) => {
                                 onClick={() => handleClick(ad._id)}
 
                             >
-                                <div className=" btn p-3 bg-dark text-light">
+                                <div className=" adtitle">
                                     <h5 className="card-header">
-                                        {ad.adAuthor} commented{' '}
+                                        {ad.adAuthor} posted{' '}
                                         <span style={{ fontSize: '0.825rem' }}>
                                             on {ad.createdAt}
                                         </span>

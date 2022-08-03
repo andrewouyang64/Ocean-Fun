@@ -1,0 +1,30 @@
+.signupPage {
+    display: flex;
+    justify-content: center;
+}
+
+.signup {
+    
+    
+    width: 450px;
+    background-color: rgb(93, 144, 207);
+      
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+}
+
+.signupColor {
+    background-color: rgb(27, 89, 147);
+}
+
+.signupButton {
+    
+padding: 5px;
+    background-color: rgb(27, 89, 147);
+    color: white;
+    border-radius: 5px;
+  }
+  .signupButton:hover {
+    background-color: rgb(75, 131, 222);
+  }

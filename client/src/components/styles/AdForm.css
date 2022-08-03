@@ -1,24 +1,40 @@
 .newad {
-    display: flex;
-      flex-direction: row;
+    /* display: flex;
+      flex-direction: row; */
       justify-content: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
+
+  .newAd h3 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .newAd p {
+    display: flex;
+    justify-content: center;
+  }
+
   .adform {
-    
+    display: flex;
+    justify-content: center; 
+  }
+  
+  .formcontent {
+    position: relative;
+    left: 29%;
       width: 450px;
-      background-color: gainsboro;
+      background-color: rgb(27, 89, 147);
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
     
-  }
-  
-  .formcontent {
-    margin-left: 16.6%;
-    margin-right: 16.6%;
+    /* margin-left: 16.6%;
+    margin-right: 16.6%; */
   }
   
   .title {
+    
     background-color: white;
     border: 1px;
     color: black;
@@ -28,6 +44,7 @@
   
   .ad {
     /*resize: vertical;*/
+    
     background-color: white;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -39,6 +56,7 @@
   
   
   .formcontent button {
+    
     border-color: aqua;
     background-color: rgb(84, 85, 91);
     color: white;
