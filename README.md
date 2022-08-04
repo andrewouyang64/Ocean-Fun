@@ -48,16 +48,22 @@ THEN I am able to logout and send back to the login page
 ## Screenshot
 This is a screenshot of the generated HTML webpage.
 
-[Ocean Fun application homepage]()
+![Ocean Fun application Screenshot](../Ocean-Fun/client/src/Images/Screen Shot.png)
+
+![Ocean Fun application Screenshot](./client/src/Images/ScreenShot  pm.png)
 
 ## Credits
-- Bootstrap: https://getbootstrap.com/
-- React: https://reactjs.org/
-- 
+
+- MongoDB — document database: https://www.mongodb.com/
+- Express(.js) — Node.js web framework: https://expressjs.com/
+- React(.js) — a client-side JavaScript framework: https://reactjs.org/
+- Node(.js) — the premier JavaScript web server: https://nodejs.org/en/
+- CSS framework: https://developer.mozilla.org/en-US/docs/Web/CSS
+
  
 
 ## Deployment
-[Ocean Fun Deployed on Heroku]()
+[Ocean Fun Deployed on Heroku](https://ocean-fun-oz.herokuapp.com/)
 
 ## License
 
