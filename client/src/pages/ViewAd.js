@@ -69,7 +69,7 @@ export default function ViewAd() {
                 </div>
             </div>
 
-            <div className='singleAd bb'>
+            <div className='col'>
                 {adId && <SingleAd adId={adId} />}
                 {/* {renderCard()} */}
                 {/* <div classNam

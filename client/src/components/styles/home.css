@@ -46,10 +46,24 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
-  .aa:hover {
-    background-color: rgb(12, 192, 192);
+  .aaa:hover {
+    /* background-color: rgb(12, 192, 192); */
+    text-decoration: none;
     
+  }
+
+  .sportName:hover {
+    /* background-color: rgb(12, 192, 192); */
+    text-decoration: none;
     cursor: pointer;
+    color: rgb(183, 218, 213);
+  }
+
+  .training:hover {
+    /* background-color: rgb(12, 192, 192); */
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(183, 218, 213);
   }
 
   .footerButton {

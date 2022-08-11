@@ -9,10 +9,25 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.oceanFun {
+    color: white;
+    
+}
+.oceanFun:hover {
+    color: rgb(183, 218, 213);
+    text-decoration: none;
+}
+
 .logged {
     /* background-color: rgb(81, 140, 216); */
     background-color: rgb(29, 161, 135);
     font-size: 1.5rem;
     padding: 12px;
     border-radius: 5px;
+    position: relative;
+    top: 2px;
+}
+
+.logout:hover {
+    cursor: pointer;
 }

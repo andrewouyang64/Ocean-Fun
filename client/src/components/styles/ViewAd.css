@@ -23,7 +23,8 @@
 .bb {
     
     margin: 20px;
-    width: 38%;
+    /* width: 38%; */
+    width: 450px;
     background-color: rgb(93, 144, 207);
     padding: 20px;
     border-radius: 10px;

@@ -1,7 +1,5 @@
 import React from 'react';
 
-// Import the `useParams()` hook
-import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import CommentList from '../CommentList';
@@ -24,7 +22,7 @@ const SingleAd = ({ adId }) => {
         return <div>Loading...</div>;
     }
     return (
-        <div className="col">
+        <div className="singleAd bb">
             <h3 className="card-header singAd text-light p-2 m-0">
                 {ad.adAuthor} <br />
                 <span style={{ fontSize: '1rem' }}>
