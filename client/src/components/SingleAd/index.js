@@ -25,20 +25,20 @@ const SingleAd = ({ adId }) => {
                 </span>
             </h3>
             <div className="bg-light py-4">
-                <blockquote
-                    className="p-4"
+                <p
+                    className="p-4 adFont"
                     style={{
-                        fontSize: '1.5rem',
+                        // fontSize: '1.2rem',
                         fontStyle: 'italic',
                         border: '2px solid #1a1a1a',
+                        // border: '2px dotted #1a1a1a',
                         lineHeight: '1.5',
                     }}
-                >
+                    >
                     {ad.title}
                     {ad.adText}
-                </blockquote>
-
-                <h4 className='contact p-4 ml-4' >contact me at : {ad.email}</h4>
+                </p>
+                <h4 className='contact' >contact me at :{ad.email}</h4>
 
             </div>
 

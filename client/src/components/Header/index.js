@@ -13,8 +13,8 @@ const Header = () => {
         <header className="flex-row align-center head">
             <div className="container flex-row justify-space-between-lg  align-center">
                 <div>
-                    <Link to="/">
-                        <h1>OCEAN FUN</h1>
+                    <Link className="oceanFun" to="/">
+                        <h1 >Ocean Fun</h1>
                     </Link>
 
                 </div>
@@ -24,16 +24,18 @@ const Header = () => {
                             <span className="logged">
                                 {Auth.getProfile().data.username} is logged in
                             </span>
-                            <span className="btn btn-lg btn-light m-2" onClick={logout}>
+
+                            <button className="btn btn-lg btn-light m-2 logout" onClick={logout}>
+
                                 Logout
-                            </span>
+                            </button>
                         </>
                     ) : (
                         <>
-                            <Link className="btn btn-lg btn-info m-2" to="/login">
+                            <Link className="btn btn-lg btn-info m-2 " to="/login">
                                 Login
                             </Link>
-                            <Link className="btn btn-lg btn-light m-2" to="/signup">
+                            <Link className="btn btn-lg btn-light m-2 " to="/signup">
                                 Signup
                             </Link>
                         </>

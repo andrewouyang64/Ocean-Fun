@@ -52,7 +52,11 @@ export default function ViewAd() {
             </div>
 
             <div className='col'>
+
                 {adId && <SingleAd className="singleAd bb" adId={adId} />}
+
+                {adId && <SingleAd adId={adId} />}
+                
             </div>
 
         </div>

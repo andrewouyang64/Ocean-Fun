@@ -7,14 +7,10 @@ export default function SportList(props) {
         <div className="homePage">
 
             {props.sports.map(sport => (
-
-                <div key={sport.name} id={sport.name} className="aa ">
-                    <Link className="card-img" to={`/sport/${sport.name}`}>
-                        <div >
-                            <h3 className='sportName' >{sport.name}</h3>
-                            <h4 className='training'>Traning Courses</h4>
-
-                        </div>
+                <div key={sport.name} id={sport.name} className='aa'>
+                    <Link className='aaa' to={`/sport/${sport.name}`}>
+                           <h3 className='sportName' >{sport.name}</h3>
+                            <span className='training'>training course</span>     
                     </Link>
                 </div>
             ))}

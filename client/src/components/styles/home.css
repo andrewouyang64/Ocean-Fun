@@ -31,16 +31,41 @@
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
-  /* background-image: url("../../Images/Scubadiving.jpg"); */
-
 }
 
-.sportName {
+  .sportName {
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white;
+  }
 
-  padding: 5px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: black;
-}
+  .training {
+   
+    font-weight: lighter;
+    color: white;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .aaa:hover {
+    /* background-color: rgb(12, 192, 192); */
+    text-decoration: none;
+    
+  }
+
+  .sportName:hover {
+    /* background-color: rgb(12, 192, 192); */
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(183, 218, 213);
+  }
+
+  .training:hover {
+    /* background-color: rgb(12, 192, 192); */
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(183, 218, 213);
+  }
 
 .training {
 
@@ -69,3 +94,31 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
+
+
+
+@media (max-width: 858px) {
+.sportName {
+  font-size: 1.3rem;
+}
+
+.training {
+  font-size: 1.2rem;
+}
+  
+}
+
+@media (max-width: 664px) {
+  .sportName {
+    font-size: 1rem;
+    /* padding: 3px; */
+  }
+  
+  .training {
+    font-size: 0.8rem;
+    /* padding: 3px; */
+  }
+  
+      
+  }
+

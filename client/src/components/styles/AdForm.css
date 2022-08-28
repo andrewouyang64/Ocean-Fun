@@ -15,10 +15,10 @@
     justify-content: center;
   }
 
-  .adform {
+  /* .adform {
     display: flex;
     justify-content: center; 
-  }
+  } */
   
   .formcontent {
     position: relative;
@@ -63,3 +63,16 @@
     border-radius: 3px;
   }
   
+  @media (max-width: 750px) {
+.formcontent {
+  position: relative;
+  left: 11%;
+}
+  }
+
+  @media (max-width: 600px) {
+    .formcontent {
+      position: relative;
+      left: 1%;
+    }
+      }
